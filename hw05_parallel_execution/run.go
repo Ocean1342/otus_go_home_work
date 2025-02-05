@@ -60,7 +60,6 @@ func RunHw5(tasks []Task, n, m int) error {
 			}
 			countParallelGo.mu.Unlock()
 			if task, ok := <-taskChan; ok {
-				//was sleep
 				wg.Add(1)
 				countParallelGo.mu.Lock()
 				countParallelGo.n++
